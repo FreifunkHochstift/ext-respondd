@@ -8,6 +8,11 @@
     "owner": {
       "contact": "info@example.org"
     },
+    "software": {
+      "firmware": {
+        "release": "0.42"
+      }
+    },
     "system": {
       "site_code": "ffggrz",
       "role": "gateway"

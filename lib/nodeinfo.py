@@ -97,8 +97,7 @@ class Nodeinfo(Respondd):
       },
       'software': {
         'firmware': {
-          'base': lib.helper.call(['lsb_release', '-is'])[0],
-          'release': lib.helper.call(['lsb_release', '-ds'])[0]
+          'base': lib.helper.call(['lsb_release', '-ds'])[0],
         },
         'batman-adv': {
           'version': open('/sys/module/batman_adv/version').read().strip(),

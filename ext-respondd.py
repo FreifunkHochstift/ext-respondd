@@ -21,7 +21,7 @@ config = {
   'bridge': 'br-client',
   'batman': 'bat0',
   'port': 1001,
-  'addr': 'ff02::2:1001',
+  'addr': 'ff05::2:1001',
   'caching': 5,
   'rate_limit': 30,
   'rate_limit_burst': 10

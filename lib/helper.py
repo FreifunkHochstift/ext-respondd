@@ -3,6 +3,22 @@
 import netifaces as netif
 import subprocess
 import sys
+import re
+
+def batctlMeshif(cmdnargs):
+  # try to determine batctl version
+  lines = call(['batctl', '-v'])
+  version = 0
+  for line in lines:
+    m = re.match(r'batctl debian-([0-9]+)', line)
+    if m:
+    	version = int(m.group(1))
+  if version >= 2020:
+    cmd = ['batctl', 'meshif']
+  else:
+    cmd = ['batctl', '-m']
+  cmd.extend(cmdnargs)
+  return call(cmd)
 
 def call(cmdnargs):
   try:
